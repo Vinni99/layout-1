@@ -71,6 +71,8 @@ footer {
   color: white;
   padding: 1em;
   text-align: center;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+  height: auto;
 }
 
 footer h5 {
@@ -86,12 +88,28 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   #main {
     flex-direction: column;
   }
 
   #main > aside {
     flex: 1;
+  }
+
+  /* Footer responsive adjustments */
+  footer .container .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .container .row > div {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  footer .container .row > div:last-child {
+    margin-bottom: 0;
   }
 }
